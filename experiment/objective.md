@@ -1,1 +1,5 @@
-- To learn to solve problems related to Number Theory using Computer Programming. 
+- To understand and identify special classes of numbers such as perfect numbers and their mathematical properties.
+- To develop algorithms for testing number-theoretic properties (e.g., perfect numbers) efficiently using programming.
+- To explore continued fractions and their use in representing rational numbers.
+- To strengthen analytical and computational thinking by solving number theory problems through code.
+- To appreciate the elegance and patterns in numbers by connecting mathematical theory with practical programming tasks.

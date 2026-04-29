@@ -1,47 +1,175 @@
-[
-{"question":"1. The execution of a loop typically starts with:",
-"answers":{
-            "a":"initialization statements",
-            "b":"Loop body",
-            "c":"test condition",
-            "d":"update statements"
-          },
-"correctAnswer":"a"},
-
-{"question":"2. The break statement is used to exit from:",
-"answers":{
-            "a":"an if statement",
-            "b":"a for loop",
-            "c":"a program",
-            "d":"the main( ) function"
-          },
-"correctAnswer":"b"}, 
-
-{"question":"3. A do-while loop is useful when we want that the statements within the loop must be executed",
-"answers":{
-            "a":"only once",
-            "b":"At Least Once",
-            "c":"More than once",
-            "d":"None of the above"
-          },
-"correctAnswer":"b"},
-
-{"question":"4. In what sequence the initialization, testing and execution of body is done in a do-while loop ",
-"answers":{
-            "a":"Initialization, execution of body, testing",
-            "b":"Execution of body, initialization, testing",
-            "c":"Initialization, testing, execution of body",
-            "d":"None of the above"
-          },
-"correctAnswer":"a"},
-
-{"question":"5. Which looping process checks the test condition at the end of the loop?",
-"answers":{
-            "a":"for",
-            "b":"while",
-            "c":"do-while",
-            "d":"No looping peocess check condition at the end"
-          },
-"correctAnswer":"c"}
-
-]
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. Which of the following is a perfect number?",
+      "answers": {
+        "a": "6",
+        "b": "8",
+        "c": "10",
+        "d": "12"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. 6 is a perfect number (1 + 2 + 3 = 6).",
+        "b": "Incorrect. 8 is not a perfect number.",
+        "c": "Incorrect. 10 is not a perfect number.",
+        "d": "Incorrect. 12 is not a perfect number."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. What is a proper divisor of a number?",
+      "answers": {
+        "a": "A divisor less than the number itself",
+        "b": "A divisor equal to the number",
+        "c": "A divisor greater than the number",
+        "d": "Any number"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. Proper divisors are less than the number itself.",
+        "b": "Incorrect. The number itself is not a proper divisor.",
+        "c": "Incorrect. Divisors greater than the number are not possible.",
+        "d": "Incorrect. Not all numbers are divisors."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. Which of the following is the continued fraction representation of 7/3?",
+      "answers": {
+        "a": "2 1 3",
+        "b": "2 3 1",
+        "c": "3 2 1",
+        "d": "1 2 3"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. 7/3 = 2 + 1/(1 + 1/3), so the sequence is 2 1 3.",
+        "b": "Incorrect. This is not the correct sequence.",
+        "c": "Incorrect. This is not the correct sequence.",
+        "d": "Incorrect. This is not the correct sequence."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "4. Which of the following numbers is NOT a perfect number?",
+      "answers": {
+        "a": "28",
+        "b": "496",
+        "c": "12",
+        "d": "8128"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. 28 is a perfect number.",
+        "b": "Incorrect. 496 is a perfect number.",
+        "c": "Correct. 12 is not a perfect number.",
+        "d": "Incorrect. 8128 is a perfect number."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "5. What is the sum of the proper divisors of 28?",
+      "answers": {
+        "a": "14",
+        "b": "28",
+        "c": "56",
+        "d": "27"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. 14 is not the sum of all proper divisors of 28.",
+        "b": "Correct. 1 + 2 + 4 + 7 + 14 = 28.",
+        "c": "Incorrect. 56 is not the sum of proper divisors of 28.",
+        "d": "Incorrect. 27 is not the sum of proper divisors of 28."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "6. Which of the following best describes a continued fraction?",
+      "answers": {
+        "a": "A sum of fractions with increasing denominators",
+        "b": "A representation of a number as an integer part and a sequence of reciprocals",
+        "c": "A product of fractions",
+        "d": "A decimal expansion"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. Continued fractions are not just sums.",
+        "b": "Correct. Continued fractions have an integer part and a sequence of reciprocals.",
+        "c": "Incorrect. Continued fractions are not products.",
+        "d": "Incorrect. Continued fractions are not decimal expansions."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "7. Which of the following numbers is the next perfect number after 28?",
+      "answers": {
+        "a": "120",
+        "b": "496",
+        "c": "8128",
+        "d": "2016"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. 120 is not a perfect number.",
+        "b": "Correct. 496 is the next perfect number after 28.",
+        "c": "Incorrect. 8128 comes after 496.",
+        "d": "Incorrect. 2016 is not a perfect number."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "8. Which of the following statements about perfect numbers is true?",
+      "answers": {
+        "a": "All perfect numbers are even",
+        "b": "All perfect numbers are odd",
+        "c": "No perfect numbers exist",
+        "d": "All perfect numbers are prime"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. All known perfect numbers are even.",
+        "b": "Incorrect. No odd perfect numbers are known.",
+        "c": "Incorrect. Perfect numbers do exist.",
+        "d": "Incorrect. Perfect numbers are not necessarily prime."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "9. What is the continued fraction sequence for 239/51?",
+      "answers": {
+        "a": "4 1 2 5 2",
+        "b": "2 1 2 2",
+        "c": "1 2 3 4 5",
+        "d": "5 2 1 4 2"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. 239/51 = 4 + 1/(1 + 1/(2 + 1/(5 + 1/2))).",
+        "b": "Incorrect. This is the sequence for 27/10.",
+        "c": "Incorrect. This is not the correct sequence.",
+        "d": "Incorrect. This is not the correct sequence."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "10. Which of the following is NOT a property of perfect numbers?",
+      "answers": {
+        "a": "They are equal to the sum of their proper divisors",
+        "b": "They are always even (as far as known)",
+        "c": "They are always prime",
+        "d": "They are rare"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. This is the defining property of perfect numbers.",
+        "b": "Incorrect. All known perfect numbers are even.",
+        "c": "Correct. Perfect numbers are not necessarily prime.",
+        "d": "Incorrect. Perfect numbers are indeed rare."
+      },
+      "difficulty": "advanced"
+    }
+  ]
+}
