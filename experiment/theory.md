@@ -35,7 +35,7 @@ For 60:
 ### 2. Continued Fractions
 
 <div align="center">
-<img src="../images/experiment-image.jpg" alt="Fractions visualization" width="400"/>
+<img src="./images/experiment-image.jpg" alt="Fractions visualization" width="400"/>
 <br><small>Visualization of fractions and their parts</small>
 </div>
 
