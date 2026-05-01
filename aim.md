@@ -1,0 +1,1 @@
+To explore and appreciate the mathematical properties and patterns of numbers through computational problem solving, focusing on perfect numbers, continued fractions, and other elegant number-theoretic concepts using programming techniques.
