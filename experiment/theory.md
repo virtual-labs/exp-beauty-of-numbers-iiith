@@ -1,26 +1,84 @@
-**Problem 1**  
+Numbers are more than just tools for counting—they reveal fascinating patterns and properties that have inspired mathematicians for centuries. In this experiment, you will explore two beautiful ideas in number theory: perfect numbers and continued fractions.
 
-P is divisor of Q, if dividing Q by P does not leave any remainder. A number, N, is called a perfect number, if the sum of all such divisors of N(not including N) is equal to N. 6 is the smallest perfect number. It's factors are 1,2,3 and their sum is 1+2+3=6. So, to check whether a number, say N, is perfect or not, it is required to find all the divisors of that number. The easiest way to do this is to check every number form 2 to N-1 if it is dividing N completely or not, and take the sum of all the divisor. While this may work well for small numbers, it would be very time consuming for large numbers.  
+### 1. Perfect Numbers
 
-A better solutin can be built by observing that many numbers can easily be ruled out as not divisors. For instance, all the numbers between N/2 and N cannot be divisors. Similarly, all numbers between N/2 and N/3 cannot be divisors of N, and so on. So, at each step we can check two numbers to be divisors of N and at the same time we can eliminate a fraction of the numbers less than N as not divisors and putting an upper bound on the next biggest possible divisor. Lets apply this tactic to find the divisors of 60.  
+A **perfect number** is a positive integer that is equal to the sum of its proper divisors (excluding itself). For example:
 
-60 divided by 2 gives 30 as the quotient and 0 as the remainder. So, 2 and 30 are divisors and there are no other divisors greater than 30. SUM=32+1=33  
-60 divided by 3 gives 20 as the quotient and 0 as the remainder. So, 3 and 20 are divisors and there are no other divisors greater than 20. SUM=33+23=46  
-60 divided by 4 gives 15 as the quotient and 0 as the remainder. So, 4 and 15 are divisors and there are no other divisors greater than 15. SUM=46+19=65  
-60 divided by 5 gives 12 as the quotient and 0 as the remainder. So, 5 and 12 are divisors and there are no other divisors greater than 12. SUM=65+17=82  
-60 divided by 6 gives 10 as the quotient and 0 as the remainder. So, 6 and 10 are divisors and there are no other divisors greater than 10. SUM=82+16=98  
-60 divided by 7 gives 8 as the quotient and 4 as the remainder. So, 7 is not a divisor and there are no other divisors greater than or equal to 8.     
+- 6 is perfect because its divisors (other than itself) are 1, 2, and 3, and $1 + 2 + 3 = 6$.
+- 28 is perfect because $1 + 2 + 4 + 7 + 14 = 28$.
 
-Now, we see that there is no need to see any more divisors. The divisors of 60 are 2,30,3,20,4,15,5,12,6 and 10. And their sum is 97. So, 60 is not a perfect number. Lets try this procedure on 28 which is the next prefect number after 6.  
+Perfect numbers are rare and have fascinated mathematicians since ancient times. They are connected to Mersenne primes and have deep links to the history of mathematics. The search for large perfect numbers is still an active area of research.
 
-28 divided by 2 gives 14 as the quotient and 0 as the remainder. So, 2 and 14 are divisors and there are no other divisors greater than 14. SUM=1+16=17  
-28 divided by 3 gives 9 as the quotient and 2 as the remainder. So, 3 is not a divisor and there are no other divisors greater than or equal to 9. SUM=17  
-28 divided by 4 gives 7 as the quotient and 0 as the remainder. So, 4 and 7 are divisors and there are no other divisors greater than 7. SUM=17+11=28  
-28 divided by 5 gives 5 as the quotient and 3 as the remainder. So, 5 is not a divisor and there are no other divisors greater than 5. SUM=28  
+**How to check for a perfect number?**
 
-We need not check any more numbers. The SUM is 28, and hence, 28 is a perfect number.  
+To check if $N$ is perfect, sum all its divisors less than $N$ and compare the sum to $N$. Efficient algorithms only check up to $\sqrt{N}$ and use divisor pairs.
 
-**Problem 2**
+**Example:**
 
-Consider the fraction A/B. We use two variables A,B to represent a fraction. Lets see how can we solve the problem. A/B = q + 1/E. How can we find q,E given A,B such that E&gt1.; From math basics any fraction can be expressed A/B = step(A/B) + frac(A/B). frac(A/B)< 1 so 1/frac(A/B) > 1. Thus we shall choose q as step(A/B) and E as 1/frac(A/B). Now we shall see programatically how can we represent and E as we need to do the same operation on E. Obviosuly from the above equatio
-n E = B/(A-B*q) which means E is also a fraction. Thus we express E in terms of some (x,y) where x = B and y = A-B*q and do the same operation as we have done on (A,B). It is recommended to use while loop and handle the termination case properly while coding.
+> Input: 28  
+> Output: YES  
+> Input: 16  
+> Output: NO
+
+**Sample Calculation:**
+
+For 28:
+
+- Divisors (excluding 28): 1, 2, 4, 7, 14
+- Sum: $1 + 2 + 4 + 7 + 14 = 28$ (Perfect)
+
+For 60:
+
+- Divisors (excluding 60): 1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30
+- Sum: $1 + 2 + 3 + 4 + 5 + 6 + 10 + 12 + 15 + 20 + 30 = 108$ (Not perfect)
+
+### 2. Continued Fractions
+
+<div align="center">
+<img src="../images/experiment-image.jpg" alt="Fractions visualization" width="400"/>
+<br><small>Visualization of fractions and their parts</small>
+</div>
+
+Every positive rational number can be written as a **continued fraction**:
+
+$$ \frac{a}{b} = q_1 + \frac{1}{q_2 + \frac{1}{q_3 + \cdots}} $$
+
+where $q_1, q_2, \ldots$ are integers. Continued fractions reveal hidden patterns in numbers and are used in cryptography, computer arithmetic, and more.
+
+**How to compute the continued fraction?**
+
+Given two integers $a$ and $b$ ($a > b > 0$):
+
+1. Divide $a$ by $b$ to get quotient $q_1$ and remainder $r_1$.
+2. Replace $(a, b)$ with $(b, r_1)$ and repeat until the remainder is 0.
+3. The sequence of quotients is the continued fraction.
+
+**Example:**
+
+> Input: 239 51  
+> Output: 4 1 2 5 2  
+> Input: 27 10  
+> Output: 2 1 2 2
+
+**Sample Calculation:**
+
+For $\frac{239}{51}$:
+
+- $239 \div 51 = 4$ remainder 35
+- $51 \div 35 = 1$ remainder 16
+- $35 \div 16 = 2$ remainder 3
+- $16 \div 3 = 5$ remainder 1
+- $3 \div 1 = 3$ remainder 0
+- Sequence: 4, 1, 2, 5, 2
+
+### Why Study the Beauty of Numbers?
+
+Exploring these properties helps you:
+
+- Appreciate the elegance and structure in mathematics.
+- Develop efficient algorithms for number-theoretic problems.
+- Connect mathematical ideas with practical programming.
+
+---
+
+_This experiment encourages you to implement algorithms for perfect numbers and continued fractions, deepening your understanding of number theory and programming._
